@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversa Fácil</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    
+    <!-- Script para EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("hDTGUiUVIQTGVMx4o");
+        })();
+    </script>
+    
+    <!-- Script para o chatbot -->
+    <script type="module">
+        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js';
+        
+        Typebot.initBubble({
+            typebot: "catch",
+            apiHost: "https://viewer.2n4p3z.easypanel.host",
+            previewMessage: {
+                message: "Olá! Como posso ajudar?",
+                autoShowDelay: 2000,
+                avatarUrl: "https://storage.torrenet-typebot-minio.2n4p3z.easypanel.host/typebot/public/workspaces/clyh4ortp001ucrt7ruytioax/typebots/cm0b8eebk000j4opwrwwrqf5b/hostAvatar?v=1724695833266"
+            },
+            theme: {
+                button: { backgroundColor: "#3498DB" },
+                chatWindow: { backgroundColor: "#EAF4FE" }
+            }
+        });
+    </script>
+
+    <style>
+        .text-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+        }
+        .text-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .text-content a {
+            background-color: #1d4ed8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .text-content a:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100 text-gray-800">
+    <!-- Menu de Navegação -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <a href="#home" class="text-xl font-bold flex items-center">
+                <img src="assets/logo.png" alt="Logo" class="w-10 h-10 sm:w-12 sm:h-12 mr-2" />
+                <span class="text-gray-800">ChatFacilita</span>
+            </a>
+            <button class="block md:hidden text-gray-800 focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <ul class="hidden md:flex space-x-4 font-semibold text-gray-800" id="menu">
+                <li><a href="#home" class="nav-link hover:text-blue-500 hover:bg-blue-200 rounded-lg px-2 py-1">Home</a></li>
+                <li><a href="#group" class="nav-link hover:text-blue-500 hover:bg-blue-200 rounded-lg px-2 py-1">Quem Somos</a></li>
+                <li><a href="#products" class="nav-link hover:text-blue-500 hover:bg-blue-200 rounded-lg px-2 py-1">Produtos</a></li>
+                <li><a href="#cta" class="nav-link hover:text-blue-500 hover:bg-blue-200 rounded-lg px-2 py-1">Time</a></li>
+                <li><a href="#contact" class="nav-link hover:text-blue-500 hover:bg-blue-200 rounded-lg px-2 py-1">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <header id="home" class="relative overflow-hidden bg-cover bg-center h-screen">
+        <div class="swiper-container h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide" style="background-image: url('assets/farmacia.webp'); background-position: center; background-size: cover;">
+                    <div class="text-content">
+                        <h1 class="text-4xl font-bold md:text-5xl lg:text-6xl">A chave para o sucesso é uma boa comunicação</h1>
+                        <a href="https://api.whatsapp.com/send?phone=558181820893" target="_blank">ENTRE EM CONTATO CONOSCO</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide" style="background-image: url('assets/chatbot.png'); background-position: center; background-size: cover;">
+                    <div class="text-content">
+                        <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl">Use chatbots para atendimento rápido e eficiente.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+        </div>
+    </header>
+
+    <!-- Seção Quem Somos -->
+    <section id="group" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-500">Quem Somos</h2>
+            <p class="mt-4 text-lg font-semibold">Nós somos a ChatFacilita, uma empresa dedicada a fornecer soluções de chatbot para farmácias.</p>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="products" class="py-16 bg-blue-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-500">Nossos Produtos</h2>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Plano Básico</h3>
+                    <p class="mt-2 font-semibold">R$ 15,90 / mês</p>
+                    <p class="mt-2 text-gray-600">Funcionalidades essenciais para pequenas farmácias.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Plano Avançado</h3>
+                    <p class="mt-2 font-semibold">R$ 25,90 / mês</p>
+                    <p class="mt-2 text-gray-600">Soluções completas para farmácias de médio porte.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold">Plano Personalizado</h3>
+                    <p class="mt-2 font-semibold">R$ 35,90 / mês</p>
+                    <p class="mt-2 text-gray-600">Soluções customizadas para grandes farmácias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Time -->
+    <section id="cta" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-500">Conheça Nosso Time</h2>
+            <div class="mt-12 grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
+                    <img src="assets/pfp-joel.png" class="mx-auto rounded-full w-32 mb-4" alt="" />
+                    <h3 class="text-xl font-semibold">Joel Maranhao - CEO</h3>
+                </div>
+                <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
+                    <img src="assets/pfp-daniele.png" class="mx-auto rounded-full w-32 mb-4" alt="" />
+                    <h3 class="text-xl font-semibold">Daniele Barbosa - CMO</h3>
+                </div>
+                <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
+                    <img src="assets/pfp-henrique.png" class="mx-auto rounded-full w-32 mb-4" alt="" />
+                    <h3 class="text-xl font-semibold">Henrique Souza - CPO</h3>
+                </div>
+                <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
+                    <img src="assets/lucemila.jpg" class="mx-auto rounded-full w-32 mb-4" alt="" />
+                    <h3 class="text-xl font-semibold">Lucemila - CPO</h3>
+                </div>
+                <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
+                    <img src="assets/pfp-tiago.jpg" class="mx-auto rounded-full w-32 mb-4" alt="" />
+                    <h3 class="text-xl font-semibold">Tiago Roxo - CPO</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-blue-500 text-center">Entre em Contato</h2>
+            <div class="mt-8 flex flex-col md:flex-row items-stretch">
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/contato.png" class="w-full rounded-lg shadow-lg" alt="Imagem de Contato">
+                </div>
+                <div class="md:w-1/2 w-full flex justify-center bg-blue-100 p-8 rounded-lg shadow-lg">
+                    <form class="w-full" onsubmit="sendEmail(event)">
+                        <div class="mb-4">
+                            <label class="block text-left font-semibold">Nome</label>
+                            <input type="text" id="name" name="name" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-left font-semibold">E-mail</label>
+                            <input type="email" id="email" name="email" required class="w-full p-2 border rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-left font-semibold">Mensagem</label>
+                            <textarea id="message" name="message" required class="w-full p-2 border rounded"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-200 py-4">
+        <div class="container mx-auto px-6 text-center font-bold text-black">
+            <p>&copy;2024 chatFacilita - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Scripts adicionais -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+        
+        function sendEmail(event) {
+            event.preventDefault();
+            emailjs.sendForm("service_id", "template_id", event.target).then(
+                () => alert("Mensagem enviada com sucesso!"),
+                () => alert("Erro ao enviar mensagem.")
+            );
+        }
+    </script>
+</body>
+
+</html>
