@@ -18,26 +18,60 @@
         })();
     </script>
     
-    <!-- Script para o chatbot -->
-    <script type="module">
-        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js';
-        
-        Typebot.initBubble({
-            typebot: "catch",
-            apiHost: "https://viewer.2n4p3z.easypanel.host",
-            previewMessage: {
-                message: "Olá! Como posso ajudar?",
-                autoShowDelay: 2000,
-                avatarUrl: "https://storage.torrenet-typebot-minio.2n4p3z.easypanel.host/typebot/public/workspaces/clyh4ortp001ucrt7ruytioax/typebots/cm0b8eebk000j4opwrwwrqf5b/hostAvatar?v=1724695833266"
-            },
-            theme: {
-                button: { backgroundColor: "#3498DB" },
-                chatWindow: { backgroundColor: "#EAF4FE" }
-            }
-        });
-    </script>
+<div class="chatbot-bubble" id="chatbotToggle">
+    <span class="text-white text-xl">💬</span>
+</div>
+
+<div class="chatbot-container" id="chatbotContainer">
+    <iframe
+        src="https://copilotstudio.preview.microsoft.com/environments/Default-4a22f116-51ce-4fe3-aeaa-9c46143d088b/bots/crce0_assistenteDeLoja/webchat?__version__=2"
+        style="border: none; width: 100%; height: 100%;" title="Chatbot Assistente de Loja">
+    </iframe>
+</div>
+
+<script>
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotContainer = document.getElementById('chatbotContainer');
+
+    chatbotToggle.addEventListener('click', () => {
+        if (chatbotContainer.style.display === "none" || chatbotContainer.style.display === "") {
+            chatbotContainer.style.display = "block"; // Mostra o chatbot
+        } else {
+            chatbotContainer.style.display = "none"; // Esconde o chatbot
+        }
+    });
+</script>
+
 
     <style>
+        .chatbot-bubble {
+            cursor: pointer;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #3b82f6; /* Azul Tailwind */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .chatbot-container {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            bottom: 100px; /* Acima do balão */
+            right: 30px;
+            width: 400px;
+            height: 500px;
+            z-index: 1000;
+
+
+        }
+        
         .text-content {
             position: absolute;
             inset: 0;
