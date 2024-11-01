@@ -119,33 +119,87 @@
     <section id="group" class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-blue-500">Quem Somos</h2>
-            <p class="mt-4 text-lg font-semibold">Nós somos a ChatFacilita, uma empresa dedicada a fornecer soluções de chatbot para farmácias.</p>
+            <p class="mt-4 text-lg font-semibold">Nós somos a ChatFacilita e acreditamos que cada cliente merece uma experiência única e personalizada, refletindo a essência de cada farmácia. Sabemos que a fidelização de clientes é um desafio constante, especialmente com interações genéricas que não capturam a identidade da marca. Por isso, desenvolvemos uma solução completa: nossos chatbots inteligentes adaptam as respostas para um atendimento humanizado, enquanto nossa análise em tempo real permite identificar oportunidades de venda e personalizar campanhas. Com planos acessíveis, o ChatFacilita transforma a experiência de atendimento e fortalece a relação entre farmácias e seus clientes.</p>
         </div>
     </section>
 
-    <!-- Seção Produtos -->
-    <section id="products" class="py-16 bg-blue-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-blue-500">Nossos Produtos</h2>
-            <div class="mt-12 grid md:grid-cols-3 gap-8">
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold">Plano Básico</h3>
-                    <p class="mt-2 font-semibold">R$ 15,90 / mês</p>
-                    <p class="mt-2 text-gray-600">Funcionalidades essenciais para pequenas farmácias.</p>
+   
+<!-- Seção Produtos -->
+<section id="products" class="py-16 bg-blue-100">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-blue-500">Nossos Produtos</h2>
+        <div class="mt-12 grid md:grid-cols-3 gap-8">
+            <!-- Plano Básico -->
+            <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-500">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-star text-blue-500 text-3xl"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold">Plano Avançado</h3>
-                    <p class="mt-2 font-semibold">R$ 25,90 / mês</p>
-                    <p class="mt-2 text-gray-600">Soluções completas para farmácias de médio porte.</p>
+                <h3 class="text-2xl font-bold">Plano Básico</h3>
+                <p class="mt-2 text-lg font-semibold">R$ 15,90 / mês</p>
+                <p class="mt-2 text-gray-500">Funcionalidades essenciais para pequenas farmácias.</p>
+                <ul class="mt-4 text-center space-y-2">
+                    <li>Acesso a relatórios básicos <span class="text-green-500">✓</span></li>
+                    <li>Suporte via e-mail <span class="text-green-500">✓</span></li>
+                    <li>Gestão de estoque limitada <span class="text-green-500">✓</span></li>
+                    <li>Integração com sistemas de pagamento <span class="text-red-500">✕</span></li>
+                    <li>Acesso a relatórios avançados <span class="text-red-500">✕</span></li>
+                    <li>Gestão de estoque completa <span class="text-red-500">✕</span></li>
+                    <li>Relatórios personalizados <span class="text-red-500">✕</span></li>
+                    <li>Consultoria especializada <span class="text-red-500">✕</span></li>
+                    <li>Integração com sistemas ERP <span class="text-red-500">✕</span></li>
+                </ul>
+                <a href="chatbot.html" class="mt-6 inline-block w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Saiba mais</a>
+            </div>
+
+            <!-- Plano Avançado -->
+            <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-700">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-crown text-blue-700 text-3xl"></i>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold">Plano Personalizado</h3>
-                    <p class="mt-2 font-semibold">R$ 35,90 / mês</p>
-                    <p class="mt-2 text-gray-600">Soluções customizadas para grandes farmácias.</p>
+                <h3 class="text-2xl font-bold">Plano Avançado</h3>
+                <p class="mt-2 text-lg font-semibold">R$ 25,90 / mês</p>
+                <p class="mt-2 text-gray-500">Soluções completas para farmácias de médio porte.</p>
+                <ul class="mt-4 text-center space-y-2">
+                    <li>Acesso a relatórios básicos <span class="text-green-500">✓</span></li>
+                    <li>Suporte via e-mail <span class="text-green-500">✓</span></li>
+                    <li>Gestão de estoque limitada <span class="text-green-500">✓</span></li>
+                    <li>Integração com sistemas de pagamento <span class="text-green-500">✓</span></li>
+                    <li>Acesso a relatórios avançados <span class="text-green-500">✓</span></li>
+                    <li>Gestão de estoque completa <span class="text-red-500">✕</span></li>
+                    <li>Relatórios personalizados <span class="text-red-500">✕</span></li>
+                    <li>Consultoria especializada <span class="text-red-500">✕</span></li>
+                    <li>Integração com sistemas ERP <span class="text-red-500">✕</span></li>
+                </ul>
+                <a href="chatbot.html" class="mt-6 inline-block w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800">Saiba mais</a>
+            </div>
+
+            <!-- Plano Personalizado -->
+            <div class="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-900">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-pencil-alt text-blue-900 text-3xl"></i>
                 </div>
+                <h3 class="text-2xl font-bold">Plano Personalizado</h3>
+                <p class="mt-2 text-lg font-semibold">R$ 35,90 / mês</p>
+                <p class="mt-2 text-gray-500">Soluções customizadas para grandes farmácias.</p>
+                <ul class="mt-4 text-center space-y-2">
+                    <li>Acesso a relatórios básicos <span class="text-green-500">✓</span></li>
+                    <li>Suporte via e-mail <span class="text-green-500">✓</span></li>
+                    <li>Gestão de estoque limitada <span class="text-green-500">✓</span></li>
+                    <li>Integração com sistemas de pagamento <span class="text-green-500">✓</span></li>
+                    <li>Acesso a relatórios avançados <span class="text-green-500">✓</span></li>
+                    <li>Gestão de estoque completa <span class="text-green-500">✓</span></li>
+                    <li>Relatórios personalizados <span class="text-green-500">✓</span></li>
+                    <li>Consultoria especializada <span class="text-green-500">✓</span></li>
+                    <li>Integração com sistemas ERP <span class="text-green-500">✓</span></li>
+                </ul>
+                <a href="chatbot.html" class="mt-6 inline-block w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-blue-950">Saiba mais</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
 
     <!-- Seção Time -->
     <section id="cta" class="py-16 bg-white">
@@ -159,25 +213,29 @@
                 </div>
                 <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
                     <img src="assets/pfp-daniele.png" class="mx-auto rounded-full w-32 h-32 object-cover mb-4" alt="Foto de Daniele Barbosa" />
-                    <h3 class="text-xl font-semibold">Daniele Barbosa - CMO</h3>
+                    <h3 class="text-xl font-semibold">Daniele Barbosa - Tech Lider</h3>
                 </div>
                 <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
                     <img src="assets/pfp-henrique.png" class="mx-auto rounded-full w-32 h-32 object-cover mb-4" alt="Foto de Henrique Souza" />
-                    <h3 class="text-xl font-semibold">Henrique Souza - CPO</h3>
+                    <h3 class="text-xl font-semibold">Henrique Souza - Desenvolvedor Backend com especialização em DB </h3>
                 </div>
                 <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
                     <img src="assets/lucemila.jpg" class="mx-auto rounded-full w-32 h-32 object-cover mb-4" alt="Foto de Lucemila" />
-                    <h3 class="text-xl font-semibold">Lucemila - CPO</h3>
+                    <h3 class="text-xl font-semibold">Lucemila - Desenvolvedora front end com especialista AWS</h3>
                 </div>
                 <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
                     <img src="assets/pfp-tiago.jpg" class="mx-auto rounded-full w-32 h-32 object-cover mb-4" alt="Foto de Tiago Roxo" />
-                    <h3 class="text-xl font-semibold">Tiago Roxo - CPO</h3>
+                    <h3 class="text-xl font-semibold">Tiago Roxo -  Desenvolvedor backend com especialização em IA </h3>
                 </div>
+
                 <div class="p-6 bg-blue-100 rounded-lg shadow-lg">
                     <img src="assets/pfp-Cassiano.jpg" class="mx-auto rounded-full w-32 h-32 object-cover mb-4" alt="Foto de Cassiano Junior" />
-                    <h3 class="text-xl font-semibold">Cassiano Junior - CPO</h3>
+                    <h3 class="text-xl font-semibold">Cassiano Junior - Teste de Software</h3>
                 </div>
             </div>
+
+             </div>
+
         </div>
     </section>
     
